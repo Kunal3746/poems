@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="poems.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+
+    
+    <title>My Poems</title>
+</head>
+<body>
+    <div class="trigger-zone"></div>
+    <div class="slide-button"><a href="index.html">
+        <button>Go Back</button></a>
+    </div>
+    <div class="slideshow">
+        <img src="/assests/wp.jpg" class="active">
+        <img src="/assests/wp1.jpg">
+        <img src="/assests/wp2.jpg">
+        <img src="/assests/wp3.png">
+        <img src="/assests/wp4.png">
+        <img src="/assests/wp5.png">
+        <img src="/assests/wp6.jpg">
+        <img src="/assests/wp7.jpg">
+    </div>
+    <div class="top-header">
+        <h2>My Poems</h2>
+    </div>
+    <div class="card-container">
+    <a href="poem1.html" class="card-link">
+    <div class="card">
+        <img src="/assests/wp8.png" alt="preview img"/>
+        <div class="card-body">
+            <h2 class="card-title">Those Eyes</h2>
+            <p class="card-text">Those eyes were like pearls....</p>
+        </div>
+    </div>
+    </a>
+    <a href="poem2.html" class="card-link">
+    <div class="card">
+        <img src="/assests/wp5.png" alt="preview img"/>
+        <div class="card-body">
+            <h2 class="card-title">I wish.</h2>  
+            <p class="card-text">I wish I never met some people..</p>
+        </div>
+    </div>
+    </a>
+    <a href="poem3.html" class="card-link">
+    <div class="card">
+        <img src="/assests/wp7.jpg" alt="preview img"/>
+        <div class="card-body">
+            <h2 class="card-title">Why?</h2>  
+            <p class="card-text">Is this really what you yearned for.....?</p>
+        </div>
+    </div>
+    </a>
+    </div>
+    
+
+    <script>
+        const slides = document.querySelectorAll(".slideshow img");
+        let index = 0;
+
+        function showNextSlide() {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }
+
+        setInterval(showNextSlide, 2000);
+    window.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("loaded");
+
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", e => {
+            const href = link.getAttribute("href");
+            if (!href || href.startsWith("#") || link.target === "_blank") return;
+
+                e.preventDefault();
+                document.body.classList.remove("loaded");
+                setTimeout(() => {
+                window.location.href = href;
+            }, 600);
+            });
+        });
+        });
+        const trigger = document.querySelector('.trigger-zone');
+        const button = document.querySelector('.slide-button');
+
+        trigger.addEventListener('mouseenter', () => {
+            document.body.classList.add('show-button');
+        });
+
+        // hide when leaving both trigger zone AND button
+        button.addEventListener('mouseleave', () => {
+            document.body.classList.remove('show-button');
+        });
+        trigger.addEventListener('mouseleave', () => {
+            // give a short delay so you can move onto the button smoothly
+            setTimeout(() => {
+            if (!button.matches(':hover')) {
+                document.body.classList.remove('show-button');
+            }
+            }, 150);
+        });      
+    </script>
+    
+</body>
+</html>

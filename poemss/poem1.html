@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background: url("/assests/wp5089966-anime-sad-eye-wallpapers.jpg") no-repeat center/cover;
+        }
+        body {
+            opacity: 0;
+            transition: opacity 0.6s ease; /* fade duration */
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+        .poem-container {
+        max-width: 700px;       /* not too wide */
+        margin: 100px auto;     /* center it with space on top */
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        font-family: 'Times New Roman', Times, serif;
+        backdrop-filter: blur(1px);
+        }
+
+        .poem-title {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #222;
+        }
+
+        .poem-text {
+        font-size: 20px;
+        line-height: 1.8;
+        white-space: pre-line;   /* keeps your line breaks */
+        text-align: center;      /* poetry often looks nice centered */
+        color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="poem-container">
+        <h1 class="poem-title"><u>Those Eyes</u></h1>
+        <p class="poem-text">
+            Those eyes were like pearls,
+            So precious that they can't be sold.
+            You drifted like one of those birds,
+            Which left me shivering in the cold.
+        </p>
+    </div>
+    <script src="/transition.js"></script>
+</body>
+</html>

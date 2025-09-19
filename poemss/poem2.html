@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background: url("/assests/918121.jpg") no-repeat center/cover;
+        }
+        body {
+            opacity: 0;
+            transition: opacity 0.6s ease; /* fade duration */
+        }
+        body.loaded {
+            opacity: 1;
+        }        
+        .poem-container {
+        max-width: 700px;       /* not too wide */
+        margin: 100px auto;     /* center it with space on top */
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        font-family: 'Times New Roman', Times, serif;
+        backdrop-filter: blur(5px);
+        }
+
+        .poem-title {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #000000;
+        }
+
+        .poem-text {
+        font-size: 20px;
+        line-height: 1.8;
+        white-space: pre-line;   /* keeps your line breaks */
+        text-align: center;      /* poetry often looks nice centered */
+        color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="poem-container">
+        <h1 class="poem-title"><u>I wish.</u></h1>
+        <p class="poem-text">
+            I wish I never met some people, 
+            Because they always stress me out. 
+            I wish I would've gotten some good friends, 
+            Because there's no one when I'm feeling down. 
+            I wish I'd never fallen for you, 
+            So I could peacefully at night. 
+            And at last, I wish I would've died,
+            Because I no longer know what's right.
+        </p>
+    </div>
+    <script src="/transition.js"></script>
+</body>
+</html>
