@@ -99,7 +99,7 @@ body.loaded {
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(10px);
     box-sizing: border-box;
-    z-index: 0;
+    z-index: -1;
 }
 
 .slide-button {
@@ -134,4 +134,5 @@ body.show-button .slide-button {
   left: 20px;
 
 }
+
 
