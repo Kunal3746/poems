@@ -2,10 +2,11 @@
 body {
     margin: 0;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     color: white;
     opacity: 0;
     transition: opacity 0.6s ease;
+    scroll-behavior: smooth;
 }
 body.loaded {
     opacity: 1;
@@ -43,11 +44,13 @@ body.loaded {
 }
 
 .card-container {
-  display: flex;              /* row layout */
-  justify-content: flex-start; /* align left (can use space-between/around if you want spacing) */
-  gap: 150px;                 /* spacing between cards */
-  margin-top: 150px;          /* row top margin */
-  margin-left: 120.5px;         /* row left margin */
+  display: flex;
+  justify-content: center;   /* center cards horizontally */
+  align-items: flex-start;   /* align from the top */
+  flex-wrap: wrap;           /* allow wrapping on smaller screens */
+  gap: 80px;                 /* equal spacing between cards */
+  padding: 150px 20px;       /* top margin + side padding */
+  box-sizing: border-box;
 }
 
 .card {
