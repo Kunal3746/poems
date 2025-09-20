@@ -1,19 +1,18 @@
 // transition.js
+
 function fadeIn() {
   document.body.classList.add("loaded");
 }
 
+// Run on normal page load
 window.addEventListener("DOMContentLoaded", fadeIn);
 
-// Handle back/forward navigation (bfcache)
+// Run when navigating with back/forward buttons
 window.addEventListener("pageshow", (event) => {
-  if (event.persisted) {
-    // Page was loaded from cache (back/forward button)
-    fadeIn();
-  }
+  if (event.persisted) fadeIn();
 });
 
-// Fade-out on link click
+// Handle fade-out on link clicks
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
@@ -24,7 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("loaded"); // fade-out
       setTimeout(() => {
         window.location.href = href;
-      }, 600);
+      }, 600); // match CSS transition duration
     });
   });
+});
+
+// Handle browser back/forward button fade-out
+window.addEventListener("beforeunload", () => {
+  document.body.classList.remove("loaded"); // fade-out before leaving
 });
