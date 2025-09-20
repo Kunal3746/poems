@@ -99,6 +99,7 @@ body.loaded {
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(10px);
     box-sizing: border-box;
+    z-index: 0
 }
 
 .slide-button {
@@ -131,4 +132,5 @@ body.loaded {
 /* When user hovers near top-left area */
 body.show-button .slide-button {
   left: 20px;
+
 }
