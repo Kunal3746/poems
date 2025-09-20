@@ -208,6 +208,7 @@ body.loaded {
 }
 .contact-section p a {
   text-decoration: none;
+  color: white;
 }
 
 
@@ -227,3 +228,4 @@ body.loaded {
   fill: white;            /* match text color */
 
 }
+
