@@ -206,6 +206,9 @@ body.loaded {
   line-height: 1.8rem;
   font-family: "Fira Code", monospace;
 }
+.contact-section p a {
+  text-decoration: none;
+}
 
 
 /* Typewriter for headings */
@@ -222,4 +225,5 @@ body.loaded {
   vertical-align: middle; /* aligns with text baseline */
   margin-right: 8px;      /* space between icon and text */
   fill: white;            /* match text color */
+
 }
