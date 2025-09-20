@@ -32,3 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("beforeunload", () => {
   document.body.classList.remove("loaded"); // fade-out before leaving
 });
+
+// Handle back button fade-out
+document.addEventListener("DOMContentLoaded", () => {
+  const backBtn = document.querySelector(".back-btn");
+  if (backBtn) {
+    backBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.body.classList.remove("loaded"); // fade-out
+      setTimeout(() => {
+        window.location.href = backBtn.dataset.target; // go back to poems.html
+      }, 600); // match transition duration
+    });
+  }
+});
+
+
