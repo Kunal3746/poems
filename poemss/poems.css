@@ -2,7 +2,7 @@
 body {
     margin: 0;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     color: white;
     opacity: 0;
     transition: opacity 0.6s ease;
@@ -134,6 +134,7 @@ body.show-button .slide-button {
   left: 20px;
 
 }
+
 
 
 
