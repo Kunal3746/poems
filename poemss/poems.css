@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     height: 100vh;
@@ -11,15 +10,16 @@ body {
 body.loaded {
     opacity: 1;
 }
+
+/* === Background Slideshow === */
 .slideshow {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* behind everything */
+    z-index: -1;
 }
-
 .slideshow img {
     position: absolute;
     width: 100%;
@@ -28,62 +28,63 @@ body.loaded {
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
-
 .slideshow img.active {
     opacity: 1;
 }
-
 .slideshow::after {
     content: "";
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4); /* darken */
+    background: rgba(0,0,0,0.4);
     z-index: 1;
 }
 
+/* === Card Layout === */
 .card-container {
-  display: flex;
-  justify-content: center;   /* center cards horizontally */
-  align-items: flex-start;   /* align from the top */
-  flex-wrap: wrap;           /* allow wrapping on smaller screens */
-  gap: 80px;                 /* equal spacing between cards */
-  padding: 150px 20px;       /* top margin + side padding */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* fits 4 cards neatly */
+  justify-items: center;
+  align-items: start;
+  gap: 60px;
+  padding: 140px 40px;
   box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
+/* === Card Styling === */
 .card {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  width: 272px;
-  box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.2);
+  width: 270px;
+  box-shadow: 2px 7px 13px rgba(0,0,0,0.2);
   overflow: hidden;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
 .card:hover {
-  transform: translateY(-10px); /* lift the card up */
-  box-shadow: 4px 12px 20px rgba(0,0,0,0.3); /* stronger shadow */
+  transform: translateY(-10px);
+  box-shadow: 4px 12px 20px rgba(0,0,0,0.3);
 }
-
-
 .card img {
   width: 100%;
   height: auto;
 }
-
 .card-body {
   padding: 16px;
-  backdrop-filter: blur(10px);
   font-family: "Fira Code", monospace;
 }
-
 .card-link {
   color: white;
   text-decoration: none;
 }
+
+/* === Header === */
 .top-header {
     position: fixed;
     top: 0;
@@ -96,20 +97,19 @@ body.loaded {
     text-shadow: 0 4px 10px rgba(0,0,0,0.6);
     white-space: nowrap;
     background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     box-sizing: border-box;
-    z-index: -1;
+    z-index: 10;
 }
 
+/* === Slide Button === */
 .slide-button {
   position: fixed;
-  top: 20px;       /* spacing from top */
-  left: -80px;     /* hidden to the left */
+  top: 20px;
+  left: -80px;
   transition: left 0.4s ease;
-  z-index: 1000;   /* stay above content */
+  z-index: 1000;
 }
-
 .slide-button button {
   padding: 10px 16px;
   font-size: 16px;
@@ -121,20 +121,16 @@ body.loaded {
   box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
   font-family: "Edu NSW ACT Cursive", cursive;
 }
+
+/* === Hover trigger zone === */
 .trigger-zone {
   position: fixed;
   top: 0;
   left: 0;
-  width: 60px;   /* area to detect hover */
+  width: 60px;
   height: 60px;
   z-index: 900;
 }
-/* When user hovers near top-left area */
 body.show-button .slide-button {
   left: 20px;
-
 }
-
-
-
-
