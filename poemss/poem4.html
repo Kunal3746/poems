@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poems</title>
+    <style>
+        body {
+        background: url("/assests/IMG20251026094414.jpg") no-repeat center/cover;
+        }
+        body {
+            opacity: 0;
+            transition: opacity 0.6s ease; /* fade duration */
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+        .poem-container {
+        max-width: 700px;       /* not too wide */
+        margin: 100px auto;     /* center it with space on top */
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        font-family: 'Times New Roman', Times, serif;
+        backdrop-filter: blur(1px);
+        }
+
+        .poem-title {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #222;
+        }
+
+        .poem-text {
+        font-size: 20px;
+        line-height: 1.8;
+        white-space: pre-line;   /* keeps your line breaks */
+        text-align: center;      /* poetry often looks nice centered */
+        color: #333;
+        }
+        .back-btn {
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          padding: 10px 18px;
+          border: none;
+          border-radius: 8px;
+          background: rgba(0,0,0,0.7);
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+          opacity: 0.8;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          z-index: 9999;
+        }
+        
+        .back-btn:hover {
+          opacity: 1;
+          transform: translateX(-3px);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="poem-container">
+        <h1 class="poem-title"><u>Your Birthday</u></h1>
+        <p class="poem-text">
+            It's your birthday again,
+            And I couldn't be happier.
+            Because it means,
+            I'm one more year closer.
+            I'm one more year closer,
+            To erase you from my life.
+            I'm one more year closer,
+            To make my mind mine.
+            I'm one more year closer,
+            To not tell anymore lies.
+            I'm one more year closer,
+            To move on with my life.
+        </p>
+    </div>
+    <button class="back-btn" data-target="poems.html">← Back</button>
+    <script src="/transition.js"></script>
+</body>
+
+</html>
