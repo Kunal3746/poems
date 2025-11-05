@@ -184,7 +184,7 @@ body.loaded {
 /* Containers centered with resizable width */
 .about-container,
 .contact-container,
-.more-section {
+.more-container {
   max-width: 800px;
   width: 100%;        /* makes it responsive */
   padding: 20px;      /* ensures content doesn’t touch edges */
@@ -232,5 +232,6 @@ body.loaded {
   fill: white;            /* match text color */
 
 }
+
 
 
