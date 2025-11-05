@@ -210,6 +210,10 @@ body.loaded {
   line-height: 1.8rem;
   font-family: "Fira Code", monospace;
 }
+
+.more section p {
+  text-align: justify;
+}
 .contact-section p a {
   text-decoration: none;
   color: white;
@@ -232,6 +236,7 @@ body.loaded {
   fill: white;            /* match text color */
 
 }
+
 
 
 
