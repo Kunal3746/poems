@@ -164,7 +164,8 @@ body.loaded {
 
 /* -------------------- About Section -------------------- */
 .about-section, 
-.contact-section {
+.contact-section,
+.more-section {
   width: 100%;
   min-height: 100vh;
   padding: 40px 20px; /* gives breathing space on small screens */
@@ -182,7 +183,8 @@ body.loaded {
 
 /* Containers centered with resizable width */
 .about-container,
-.contact-container {
+.contact-container,
+.more-section {
   max-width: 800px;
   width: 100%;        /* makes it responsive */
   padding: 20px;      /* ensures content doesn’t touch edges */
@@ -191,7 +193,8 @@ body.loaded {
 
 /* Headings */
 .about-section h2,
-.contact-section h2 {
+.contact-section h2,
+.more-section h2 {
   font-family: "Parisienne", cursive;
   font-size: clamp(2rem, 5vw, 4rem); /* responsive font size */
   margin-bottom: 20px;
@@ -201,7 +204,8 @@ body.loaded {
 
 /* Paragraphs */
 .about-section p,
-.contact-section p {
+.contact-section p,
+.more section p {
   font-size: clamp(1rem, 2vw, 1.5rem);
   line-height: 1.8rem;
   font-family: "Fira Code", monospace;
@@ -228,4 +232,5 @@ body.loaded {
   fill: white;            /* match text color */
 
 }
+
 
