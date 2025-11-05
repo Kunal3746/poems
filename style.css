@@ -205,13 +205,13 @@ body.loaded {
 /* Paragraphs */
 .about-section p,
 .contact-section p,
-.more section p {
+.more-section p {
   font-size: clamp(1rem, 2vw, 1.5rem);
   line-height: 1.8rem;
   font-family: "Fira Code", monospace;
 }
 
-.more section p {
+.more-section p {
   text-align: justify;
 }
 .contact-section p a {
@@ -236,6 +236,7 @@ body.loaded {
   fill: white;            /* match text color */
 
 }
+
 
 
 
