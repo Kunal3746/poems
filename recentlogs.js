@@ -1,14 +1,15 @@
-fetch("posts.json")
+fetch("recentlogs.json")
   .then(res => res.json())
-  .then(posts => {
-    const container = document.getElementById("blog-container");
+  .then(logs => {
+    const container = document.getElementById("recent-logs-container");
 
-    posts.forEach(post => {
+    logs.forEach(l => {
       container.innerHTML += `
-        <div class="post">
-          <p><strong>${post.date}</strong></p>
-          <p>${post.log}</p>
+        <div class="log-item">
+          <p><strong>${l.date}</strong></p>
+          <p>${l.log}</p>
         </div>
       `;
     });
-  });
+  })
+  .catch(err => console.error("Error loading logs:", err));
